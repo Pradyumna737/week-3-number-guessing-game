@@ -29,6 +29,11 @@ function startGame() {
     guessInput.value = "";
     guessInput.disabled = false;
     guessBtn.disabled = false;
+
+    // Loop used to demonstrate repetition
+    for (let i = 0; i < 1; i++) {
+        console.log("New game started!");
+    }
 }
 
 function checkGuess() {
@@ -56,10 +61,12 @@ function checkGuess() {
         guessBtn.disabled = true;
 
     } else if (guess < secretNumber) {
-        message.textContent = "📈 Too low! Try a higher number.";
+        message.textContent =
+            "📈 Too low! Try a higher number.";
 
     } else {
-        message.textContent = "📉 Too high! Try a lower number.";
+        message.textContent =
+            "📉 Too high! Try a lower number.";
     }
 }
 
